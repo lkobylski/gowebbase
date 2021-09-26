@@ -1,2 +1,2 @@
 # Golang sample webapp
-Sample of web application using golang.
+Sample of web application created in GO language.

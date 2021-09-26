@@ -5,14 +5,16 @@ import (
 	"gowebbase"
 )
 
+func init() {
+	gowebbase.LoadConfig()
+}
+
 func main() {
 	fmt.Println("Go Web Base")
 	var serverOpts gowebbase.ServerOpts
-	//TODO: setup config
 
+	serverOpts.Port = gowebbase.Config().GetInt("port")
 
-	//TODO: initialize server
-	serverOpts.Port = 3000
 	srv := gowebbase.NewServer(serverOpts)
 	srv.Init()
 	srv.Run()
